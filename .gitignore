@@ -1,0 +1,42 @@
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '01'), '이노톡스', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code='C110102' AND c.code_name!='기타'
+
+
+set @tmp_code='C11010102';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '01'), '상담후결정', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '02'), '1cc', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '03'), '2cc', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '04'), '3cc', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '05'), '4cc', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '06'), '5cc', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
+
+INSERT INTO common_code(common_code.code, common_code.code_name, common_code.p_code, common_code.p_code_name)
+SELECT CONCAT(c.CODE, '07'), '5cc이상', c.code, c.code_name
+FROM common_code c
+WHERE c.p_code=@tmp_code AND c.code_name!='상담 후 결정';
